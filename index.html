@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <div class="navbar bg-info text-content h-20 ">
+        <h1 class="text-3xl font-bold pl-12">Todo List</h1>
+    </div>
+    <div class="m-10 w-screen">
+        <input type="text" placeholder="Type here" class="input input-bordered input-info w-3/5" id="input"/>
+        <button class="btn bg-gray-300" id="AddButton" onclick="add()">Add</button>
+        <button class="btn bg-gray-300" onclick="deleteAll()">Delete All</button>
+        <!-- <button class="btn bg-gray-300">Submit</button> -->
+    </div>
+
+    <div class="text-xl ml-16 font-bold ">
+        <h2 class="text-2xl"><u>Tasks</u></h2>
+        <div id="Main" class="mt-8">
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
