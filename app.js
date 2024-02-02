@@ -72,7 +72,6 @@ let addDataToFirestore = async (textMessage) =>
 
 let deleteToFirestore = async(textMessage) =>{
     let res = await deleteDoc(doc(db, "Tasks", textMessage));
-    displayDataFromFirestore()
 }
 
 let updateDatatoFirebase = async(textMessage) =>
@@ -119,8 +118,10 @@ let createData = (textMessage) =>{
     console.log(textMessage);
 
     but2Tag.onclick = () => {
-        deleteToFirestore(textMessage)};
-
+        deleteToFirestore(textMessage)
+        mainTag.innerHTML = ""
+        displayDataFromFirestore();
+    }
 
     but1Tag.onclick = () => {
         updateDatatoFirebase(textMessage);
